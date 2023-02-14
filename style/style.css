@@ -1,0 +1,221 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    width: 1440px;
+    margin: 20px auto;
+    border: 1px black solid;
+}
+main{
+    width: 1170px;
+    margin: 50px auto;
+}
+li{
+    list-style: none;
+}
+h2{
+    text-align: center;
+    margin: 120px auto 80px;
+    font-family: 'Delius Unicase';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 45px;
+    letter-spacing: 0.05em;
+    color: #000000;
+}
+.grid-element-details__name{
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 23px;
+color: #FFFFFF;
+}
+.grid-element-details__Date{
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 23px;
+color: #E0E0E0;
+}
+.grid-element--city1{
+    grid-area: pic1;
+}
+.grid-element--city2{
+    grid-area: pic2; 
+}
+.grid-element--city3{
+    grid-area: pic3;   
+}
+.grid-element--city4{
+    grid-area: pic4;    
+}
+.grid-element--city5{
+    grid-area: pic5;
+}
+.grid-element--city6{
+    grid-area: pic6;    
+}
+.cities-grid{
+    display: grid; 
+    grid-template-columns: repeat(3, 370px); 
+    grid-template-rows: repeat(3, 370px); 
+    grid-template-areas: 
+                  "pic1 pic2 pic2" 
+                  "pic3 pic3 pic4" 
+                  "pic5 pic6 pic6";
+    width: 100%;
+    grid-gap: 30px;
+    max-width: 1170px;
+    margin: 0px auto;
+}
+.cities-grid img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+.grid-element{
+    position: relative;
+    cursor: pointer;
+}
+.grid-element__socials {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: .5s all;
+}
+.grid-element__ld{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.grid-element::after{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    background: linear-gradient(0, #241F24 0%,
+             rgba(91, 91, 91, 0.447552) 34.11%,
+             rgba(187, 186, 192, 0.26) 62.5%);
+    transition: .3s all;
+}
+.grid-element:hover::after{
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 15%);
+}
+.grid-element:hover .grid-element__socials{
+    opacity: 1;
+}
+.grid-element-details{
+    display: flex;
+    position: absolute;
+    color: #fff;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    justify-content: space-between;
+    z-index: 1;
+    padding: 20px;
+}
+
+.grid-element--nat1{
+    grid-area: nat1;
+}
+.grid-element--nat2{
+    grid-area: nat2; 
+}
+.grid-element--nat3{
+    grid-area: nat3;   
+}
+.grid-element--nat4{
+    grid-area: nat4;    
+}
+.grid-element--nat5{
+    grid-area: nat5;
+}
+.grid-element--nat6{
+    grid-area: nat6;    
+}
+.nature-grid{
+    display: grid; 
+    grid-template-columns: repeat(3, 370px); 
+    grid-template-rows: repeat(4, 370px); 
+    grid-template-areas: 
+                  "nat1 nat2 nat2" 
+                  "nat3 nat3 nat4" 
+                  "nat3 nat3 nat4"
+                  "nat5 nat5 nat6";
+    width: 100%;
+    grid-gap: 30px;
+    max-width: 1170px;
+    margin: 0px auto;
+}
+.nature-grid img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+.grid-element--peo1{
+    grid-area: peo1;
+}
+.grid-element--peo2{
+    grid-area: peo2; 
+}
+.grid-element--peo3{
+    grid-area: peo3;   
+}
+.grid-element--peo4{
+    grid-area: peo4;    
+}
+.grid-element--peo5{
+    grid-area: peo5;
+}
+.grid-element--peo6{
+    grid-area: peo6;    
+}
+.grid-element--peo7{
+    grid-area: peo7;    
+}
+.grid-element--peo8{
+    grid-area: peo8;    
+}
+.grid-element--peo9{
+    grid-area: peo9;    
+}
+.grid-element--peo10{
+    grid-area: peo10;    
+}
+.people-grid{
+    display: grid; 
+    grid-template-columns: repeat(3, 370px); 
+    grid-template-rows: repeat(5, 370px); 
+    grid-template-areas: 
+                  "peo1 peo2 peo3" 
+                  "peo4 peo2 peo5" 
+                  "peo6 peo7 peo5"
+                  "peo6 peo8 peo8"
+                  "peo9 peo9 peo10";
+    width: 100%;
+    grid-gap: 30px;
+    max-width: 1170px;
+    margin: 0px auto;
+}
+.people-grid img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
